@@ -25,7 +25,7 @@ public class N_PremierNombresEntiers_DOWHILE {
         //CONSTANTES
          produit = 1;
         i=1;
-         System.out.print("entrez le nomre entier:");
+         System.out.print("entrez le nombre entier:");
         n = reader.nextInt();
        
         do { produit = produit * i;
