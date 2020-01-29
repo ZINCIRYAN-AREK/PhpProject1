@@ -63,7 +63,7 @@ echo COLORS [1] . ' <br> ';
 //
 // BOUCLE FOR
 //
-// création du tableau"
+// création du tableau".
 
 $tableau = array ('Jean', 'Robert', 'Paul', 'Joe', 'Alain');
 //boucle sur le tableau
@@ -72,7 +72,7 @@ for ($i=0; $i<5; $i++) {
 }
 
 //AVEC LA FONCTION COUNT() OU SIZEOF()
-//création du tableau
+//création du tableau.
 $tableau = array ('Jean', 'Robert', 'Paul', 'Joe', 'Alain');
 //boucle du tableau
 for ($i=0; $i<sizeof($tableau); $i++) {
@@ -81,9 +81,9 @@ for ($i=0; $i<sizeof($tableau); $i++) {
     echo $tableau [$i] . ' <br> ';
 }
 
-//BOUCLE foreach
-//création du tableau
-//création du tableau
+//BOUCLE foreach.
+
+//création du tableau.
 $tableau = array ('Jean', 'Robert', 'Paul', 'Joe', 'Alain');
 //boucle sur le tableau
 foreach ($tableau as $val) {
@@ -92,15 +92,15 @@ foreach ($tableau as $val) {
     echo $val. ' <br> ';
 }
 
-//Affichage des clés
-//création du tableau
+//Affichage des clés.
+//création du tableau.
 $tableau = array ('A1' => 'Jean', 'B4'=> 'Robert', 3=> 'Paul', 'Toto' =>'Joe', 'H' =>'Alain');
 //boucle sur le tableau
 foreach ($tableau as $key =>$val) {
     echo ' Clé : ' .$key. ', valeur : ' .$val.'<br>';
 }
-//Affichage des valeurs
-//création du tableau
+//Affichage des valeurs.
+//création du tableau.
 $tableau = array ('A1' => 'Jean', 'B4'=> 'Robert', 3=> 'Paul', 'Toto' =>'Joe', 'H' =>'Alain');
 foreach ($tableau as $val) {
     //affichage des valeurs deu tableau concaténées
@@ -110,35 +110,35 @@ foreach ($tableau as $val) {
 
 //Depusi PHP 7 foreach travaille sur une copie du tableau
 // le pointeur du tableau n'est plus modifié pendant son parcours
-//reste modifiable s'il est passé pa rréférence
+//reste modifiable s'il est passé par référence.
 $tab = [0];
 foreach ($tab as &$val){
     var_dump ($val);
     $tab[1]=1;
 }
 
-//LA FONCTION print_r
-//création tableau
+//LA FONCTION print_r.
+//création tableau.
 $tableau = array ('A1' => 'Jean', 'B4'=> 'Robert', 3=> 'Paul', 'Toto' =>'Joe', 'H' =>'Alain');
 print_r($tableau);
 
-// 5 fonctions sur les tableaux
+// 5 fonctions sur les tableaux.
 
-// a longueur d'un tableau'
-// création du tableau
+// a longueur d'un tableau'.
+// création du tableau.
 $tableau = array ('A1' => 'Jean', 'B4'=> 'Robert', 3=> 'Paul', 'Toto' =>'Joe', 'H' =>'Alain');
 $taille = count ($tableau);
 echo ' La taille du tableau est : '.$taille;
 
-// B existant 
-//creation du tableau
+// B existant .
+//creation du tableau.
 $tableau = array ('A1' => 'Jean', 'B4'=> 'Robert', 3=> 'Paul', 'Toto' =>'Joe', 'H' =>'Alain');
 if (in_array( 'Robert' , $tableau)){
 echo ' Robert est dans le tableau';
 }
 
-// 3eme param : false par defaut (ne tient pas compte du type) 
-// creation du tableau
+// 3eme param : false par defaut (ne tient pas compte du type). 
+// creation du tableau.
 $tableau = array('10','33','55','78');
 if (in_array('33', $tableau , true)){   // true pour tenir compte du type
     echo ' <br> Le 33 se trouve dans le tableau ';
@@ -147,8 +147,8 @@ if (in_array('33', $tableau , true)){   // true pour tenir compte du type
 }
 
 
-// C existant d'une clé
-//creation du tableau
+// C existant d'une clé.
+//creation du tableau.
 $tableau = array ('A1' => 'Jean', 'B4'=> 'Robert', 3=> 'Paul', 'Toto' =>'Joe', 'H' =>'Alain');
 if (array_key_exists( 3, $tableau)){
     echo '<br> La clé " 3 " est dans le tableau ';
@@ -157,7 +157,7 @@ if (array_key_exists( 3, $tableau)){
 }
 
 
-//creation du tableau
+//creation du tableau.
 $tableau = array ('Jean','Robert','Paul','Joe','Alain');
 if (array_key_exists( 4 , $tableau )){
     echo '<br> La valeur de la quatrieme clé est : ' .$tableau[4];
@@ -166,8 +166,8 @@ if (array_key_exists( 4 , $tableau )){
 
 // D tri d'un tableau
 
-//sort(): trie les valeurs de la plus petite à la plus grande
-// creation du tableau
+//sort(): trie les valeurs de la plus petite à la plus grande.
+// creation du tableau.
 $tableau = array ('A1' => 'Jean', 'B4'=> 'Robert', 3=> 'Paul', 'Toto' =>'Joe', 'H' =>'Alain');
 sort($tableau); // tri du tableau
 foreach($tableau as $cle=>$valeur){
@@ -175,16 +175,16 @@ foreach($tableau as $cle=>$valeur){
 }
 
 
-//asort(): trie les valeurs de la plus petite à la plus grande avec preservation de la clé
-// creation du tableau
+//asort(): trie les valeurs de la plus petite à la plus grande avec preservation de la clé.
+// creation du tableau.
 $tableau = array ('A1' => 'Jean', 'B4'=> 'Robert', 3=> 'Paul', 'Toto' =>'Joe', 'H' =>'Alain');
-asort($tableau); // tri du tableau avec preservation de la clé
+asort($tableau); // tri du tableau avec preservation de la clé.
 foreach($tableau as $cle=>$valeur){
     echo'<br>clé :'.$cle.', valeur :'.$valeur.'<br />';
 }
 
-//rsort(): trie les valeurs de la plus grandes à la plus petite
-//creation du tableau
+//rsort(): trie les valeurs de la plus grandes à la plus petite.
+//creation du tableau.
 $tableau = array ('A1' => 'Jean', 'B4'=> 'Robert', 3=> 'Paul', 'Toto' =>'Joe', 'H' =>'Alain');
 rsort($tableau); // tri du tableau plus grand au plus petit
 foreach($tableau as $cle=>$valeur){
@@ -192,8 +192,8 @@ foreach($tableau as $cle=>$valeur){
 }
 
 
-//arsort(): trie les valeurs de la plus grande à la plus petite avec préservation de la clé
-// creation du tableau
+//arsort(): trie les valeurs de la plus grande à la plus petite avec préservation de la clé.
+// creation du tableau.
 $tableau = array ('A1' => 'Jean', 'B4'=> 'Robert', 3=> 'Paul', 'Toto' =>'Joe', 'H' =>'Alain');
 arsort($tableau); // tri du tableau suvant la clé
 foreach($tableau as $cle=>$valeur){
@@ -201,8 +201,8 @@ foreach($tableau as $cle=>$valeur){
 }
 
 
-// krsort():trie les clé du tableau de la plus grande a la plus petite avec preservation de la clé
-//creation du tableau
+// krsort():trie les clé du tableau de la plus grande a la plus petite avec preservation de la clé.
+//creation du tableau.
 $tableau = array ('A1' => 'Jean', 'B4'=> 'Robert', 3=> 'Paul', 'Toto' =>'Joe', 'H' =>'Alain');
 ksort($tableau); // tri du tableau descendant de la clé
 foreach($tableau as $cle=>$valeur){
@@ -212,7 +212,7 @@ foreach($tableau as $cle=>$valeur){
 
 //array_search() est une fonction equivalente à in_array(). Elle permet de reconnaitre
 //tableau mais elle renvoie la clé de l'élément recherche.
-//creation du tableau
+//creation du tableau.
 $tableau = array ('A1' => 'Jean', 'B4'=> 'Robert', 3=> 'Paul', 'Toto' =>'Joe', 'H' =>'Alain');
 $cle_element = array_search('Robert',$tableau);
     echo '<br> La clé de l`élément recherché est :' .$cle_element;
@@ -225,9 +225,9 @@ $cle_element = array_search('Robert', $tableau);
     echo'<br> La clé de l`élément est :' .$cle_element;
     
 
-// f decouper une chaine dans un tableu
+// f decouper une chaine dans un tableu.
 
-// explode() permet de découper une chaine dans un tableau en utilisant un séparateur
+// explode() permet de découper une chaine dans un tableau en utilisant un séparateur.
 $ensemble = "1;2;3;4;5";
 $tableau = explode(";",$ensemble);
 echo'<br> La premier valeur du tableau est : '.$tableau[0]."<br />";
@@ -241,15 +241,15 @@ foreach($tableau as $valeur){
  echo $valeur.";" ;
 }
 
-// G regrouper les valeurs d'un tableau dans une chaine
+// G regrouper les valeurs d'un tableau dans une chaine.
 
-// implode() permet de regrouper les valeurs d'un tableau dans une chaine en utilisant un séparateur
+// implode() permet de regrouper les valeurs d'un tableau dans une chaine en utilisant un séparateur.
 $tableau = array("Jean","Robert","Paul");
 $noms = implode(" ; ",$tableau);
 
     echo '<br> Les noms sont : ' .$noms ;    
 
-// H decouper une chaine en morceaux de longueur fixe
+// H decouper une chaine en morceaux de longueur fixe.
 
 //str_split() permet de decouper une chaine en morceaux de longueur fixe dans 
 //parametre indiquant la taille des morceaux de chaine.
@@ -263,20 +263,44 @@ foreach($tableau as $valeur ){
 
 
 // I ajouter des éléments à la fn du tableau
-//array_push() permet d'ajouter un ou plusieurs éléments à la fin du tableau
+//array_push() permet d'ajouter un ou plusieurs éléments à la fin du tableau.
 $tableau = array("Jean","Robert","Paul");
 array_push($tableau,"Joe","Alain");
 echo $tableau[4];
 
-// J suppression d'un élément à la fin du tableau
+// J suppression d'un élément à la fin du tableau.
 
 $tableau = array("Jean","Robert","Paul");
 $nom = array_pop($tableau);
-echo " Le nom suprimé est : " .$nom;
+echo " <br> Le nom suprimé est : " .$nom;
 
 $tableau = array("Jean","Robert","Paul");
+echo ' <br> Avant la suppression, le nombre d`éléments dans le tableau est : ' .count($tableau).'<br>';
+$nombre_elements = count ($tableau);
+for ( $i = 0 ; $i < $nombre_elements; $i++){
+    $nom = array_pop($tableau);
+}
+echo ' Le dernier nom supprimé est : ' .$nom;'<br>';
+echo '<br> Après supression, nombre éléments : ' .count($tableau);
+
+// K Séléction aléatoire d'un élément du tableau.
+
+//array_rand() permet de selectionner de manière aléatoire un ou 
+//plusieurs éléments d'un tableau et de retourner les clés correspondantes.
+
+$tableau = array("Jean","Robert","Paul");
+$cle_aleatoire = array_rand($tableau);
+echo ' <br> Nom sélectionné au hasard : ' .$tableau[$cle_aleatoire];'<br>';
+
+// le parametre $nombre_selectionne est optionnel,
+// par défaut il vaut 1. Il correspond au nombre de 
+// valeurs à prendre au hasard. Voici un exemple l'utilisant :
+$tableau = array("Jean","Robert","Paul");
+$tabeau_cle_aleatoire = array_rand($tableau, 2 );
+echo '<br> Nom sélectionné au hasard numero 1 : ' .$tableau[$tableau_cle_aleatoire[0]].'<br>';
+echo ' Nom sélectionné au hasard numero 2 : ' .$tableau[$tableau_cle_aleatoire[1]]
 
 
 
-    
+
 ?>
