@@ -110,7 +110,7 @@ foreach ($tableau as $val) {
 
 //Depusi PHP 7 foreach travaille sur une copie du tableau
 // le pointeur du tableau n'est plus modifié pendant son parcours
-//reste modifiable s'il est passé pa rréférence
+//reste modifiable s'il est passé par référence
 $tab = [0];
 foreach ($tab as &$val){
     var_dump ($val);
