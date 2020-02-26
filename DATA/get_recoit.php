@@ -12,7 +12,7 @@ and open the template in the editor.
     <body>
         <?php
         // put your code here
-        if(isset($_GET['nom']) && isset($_GET['prenom'])){
+       /* if(isset($_GET['nom']) && isset($_GET['prenom'])){
         echo "Le nom reçus est : " .$_GET['nom']."<br/>";
         echo "Le prenom reçus est : " .$_GET['prenom']. "<br/>";
        }else{
@@ -27,8 +27,12 @@ and open the template in the editor.
        foreach($_GET['donnee'] as $val){
            echo $val." ";
        }
-       }
+       }*/
        
+        if (isset($_GET['parametre'])){
+            echo " Le parametre reçu est : ".$_GET['parametre']."<br/>";
+        }
+        
         ?>
     
        

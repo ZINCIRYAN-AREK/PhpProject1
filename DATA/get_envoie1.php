@@ -12,10 +12,12 @@ and open the template in the editor.
     <body>
         <?php
         // put your code here
+        $param="Jean&Dupont Company";
         ?>
         <div> 
         <p>
-            <a href="get_recoit.php?urlencode()Jean&Dupont+Company">
+            <a href="get_recoit.php?parametre=<?php echo urlencode($param)?>"> 
+               
                 vers page traitement
             </a> 
         </p>
